@@ -1,0 +1,13 @@
+<div class="addCard">
+
+    <input type="text" #newTodo />
+    <button (click)="addTodo(newTodo)">add</button>
+</div>
+
+<div class="todos" *ngFor="let todo of todos">
+
+    <!-- <p>id : {{ todo._id }}</p> -->
+
+    <h1>{{todo.task}}</h1>
+
+</div>
