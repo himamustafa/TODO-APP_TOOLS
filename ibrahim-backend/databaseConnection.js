@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const DataBaseconnection = async() => {
-
-    const dburl = "mongodb://"+process.env.IP+":27017/example"
+   var dburl=mongoose.connect('mongodb://hebaa:himaa@'+process.env.IP+':27017/sampledb?directConnection=true&serverSelectionTimeoutMS=2000')
+    //const dburl = "mongodb://"+process.env.IP+":27017/example"
     await mongoose.connect(
         dburl, {
             useNewUrlParser: true,
