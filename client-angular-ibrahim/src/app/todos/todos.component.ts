@@ -23,7 +23,7 @@ export class TodosComponent implements OnInit {
 
   async getTodo() {
     this.httpClient
-      .get<any>('http://localhost:3000/getTodos')
+      .get<any>('http://hebaback-toolz.apps.eu45.prod.nextcle.com/getTodos')
       .subscribe((todos) => {
         this.todos = todos;
       });
@@ -34,7 +34,7 @@ export class TodosComponent implements OnInit {
       return;
     } else {
       this.httpClient
-        .post<any>('http://localhost:3000/addTodo', {
+        .post<any>('http://hebaback-toolz.apps.eu45.prod.nextcle.com/addTodo', {
           desc: todo.value,
         })
         .subscribe(() => {});
